@@ -3,9 +3,11 @@ import {useState} from 'react'
 import { Layout, Menu } from 'antd';
 import {
   MenuOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
+  DashboardOutlined,
+  DatabaseOutlined,
+  AreaChartOutlined,
+  SettingOutlined,
+  LogoutOutlined
 } from '@ant-design/icons'
 
 import FooterComponent from '../Includes/Footer';
@@ -23,19 +25,19 @@ const DefaultLayout = ({children}) => {
             <Sider  trigger={null} collapsible collapsed={collapsed} style={{minHeight:'100vh'}}>
             <div className="logo">Stock</div>
             <Menu theme="dark" mode="inline">
-                <Menu.Item key="1" icon={<UserOutlined />}>
+                <Menu.Item key="1" icon={<DashboardOutlined />}>
                     <Link href="/"> Dashboard</Link>
                 </Menu.Item>
-                <Menu.Item key="2" icon={<VideoCameraOutlined />}>
+                <Menu.Item key="2" icon={<DatabaseOutlined />}>
                     <Link href="/Products"> Products</Link>
                 </Menu.Item>
-                <Menu.Item key="3" icon={<UploadOutlined />}>
+                <Menu.Item key="3" icon={<AreaChartOutlined />}>
                     <Link href="/Report"> Report</Link>
                 </Menu.Item>
-                <Menu.Item key="4" icon={<UploadOutlined />}>
+                <Menu.Item key="4" icon={<SettingOutlined />}>
                     <Link href="/Setting"> Setting</Link>
                 </Menu.Item>
-                <Menu.Item key="5" icon={<UploadOutlined />}>
+                <Menu.Item key="5" icon={<LogoutOutlined />}>
                     Logout
                 </Menu.Item>
             </Menu>

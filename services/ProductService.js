@@ -1,33 +1,33 @@
-import http from '../constants/_configAxios'
+import http from "../constants/_configAxios";
 
-// Method Read All Product
+//Method Read All Product
 const getAllProduct = () => {
-    return http.get("/products")
-}
+  return http.get("/products");
+};
 
-// Method Read By ID
-const getProductByID = (id) => {
-    return http.get(`/products/${id}`)
-}
+//Method Read By ID
+const getProductById = (id) => {
+  return http.get(`/products/${id}`);
+};
 
-// Method Add new product
+//Method Add New Product
 const addNewProduct = (data) => {
-    return http.post("/products", data)
-}
+  return http.post(`/products`, data);
+};
 
-// Method Update Product
+//Method Update Product
 const updateProduct = (id, data) => {
-    return http.put(`/products/${id}`, data)
-}
+  return http.put(`/products/${id}`, data);
+};
 
-// Method Delete Product by ID
+//Method Delete Product
 const deleteProduct = (id) => {
-    return http.delete(`/products/${id}`)
-}
+  return http.delete(`/products/${id}`);
+};
 
 export default {
     getAllProduct,
-    getProductByID,
+    getProductById,
     addNewProduct,
     updateProduct,
     deleteProduct
